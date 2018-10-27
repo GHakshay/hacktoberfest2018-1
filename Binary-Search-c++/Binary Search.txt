@@ -2,18 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int binarySearch(int *input,int beg,int end,int number){
-    if(beg>end){
-        return -1;
-    }
-    int mid = (beg+end)/2;
-    if(number == input[mid]){
-        return mid;
-    }
-    //Search left sub array
-    if(number<input[mid]){
-        return binarySearch(input,beg,mid-1,number);
-    }
+
     //Search right sub array
     else{
         return binarySearch(input,mid+1,end,number);
